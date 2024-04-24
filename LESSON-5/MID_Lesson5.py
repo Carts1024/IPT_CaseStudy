@@ -4,7 +4,7 @@ import os
 def start():  # Main (Function 1)
 
     print('--------------------------------------------------------------')
-    print('               WELCOME TO DICTIONARY METHODS BY GROUP 4')
+    print('               WELCOME TO DICTIONARY METHODS BY GROUP 6')
     print('                              MEMBERS:\n')
     print('                        BERGADO,CARL ALDREY')
     print('                        DANGA, CRYSTALYN')
