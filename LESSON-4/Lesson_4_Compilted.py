@@ -1,3 +1,20 @@
+import os
+
+
+def start():  # Main (Function 1)
+
+    print('--------------------------------------------------------------')
+    print('               WELCOME TO DICTIONARY METHODS BY GROUP 6')
+    print('                              MEMBERS:\n')
+    print('                        BERGADO,CARL ALDREY')
+    print('                        DANGA, CRYSTALYN')
+    print('                        DELA TORRE, MAE LORAINE')
+    print('                        PALLER, CLARISSE IRISH')
+    print('                        SORETO, LEI ANN\n')
+    input(
+        '                       PRESS ENTER TO CONTINUE\n--------------------------------------------------------------')
+    os.system('cls')
+    
 def First_Number():
     x = [1, 2, 3, 4, 5]
     y = [11, 12, 13, 14, 15]
