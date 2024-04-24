@@ -60,7 +60,7 @@ def getUserInput():
         else:
                 print("Incorrect Password.")
     else:
-        print("Username not found.")
+        print("Username is not a valid user of the Sytem.")
         getUserInput
 
 getUserInput()
