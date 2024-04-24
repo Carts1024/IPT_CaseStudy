@@ -14,7 +14,8 @@ def start():  # Main (Function 1)
     input(
         '                       PRESS ENTER TO CONTINUE\n--------------------------------------------------------------')
     os.system('cls')
-    
+
+
 def First_Number():
     x = [1, 2, 3, 4, 5]
     y = [11, 12, 13, 14, 15]
@@ -240,5 +241,5 @@ def RunProgram():
 '''    else:
         print("\nInvalid input! Choose what is only available!")'''
 
-
+start()
 RunProgram()
