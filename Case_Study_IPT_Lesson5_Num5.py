@@ -1,66 +1,27 @@
-def getUserInput():
+def SystemLogin():
     usernameInput = input("Enter username: ")
     passwordInput = input("Enter password: ")
-    usernames = {
-        "username1" : "Mae",
-        "username2" : "Loraine",
-        "username3" : "Crystal",
-        "username4" : "Lyn",
-        "username5" : "Clarisse",
-        "username6" : "Irish",
-        "username7" : "Lei",
-        "username8" : "Ann",
-        "username9" : "Carl",
-        "username10" : "Aldrey"
-    }
-    passwords = {
-        "password1" : "Ymata",
-        "password2" : "Dela Torre",
-        "password3" : "Rubio",
-        "password4" : "Danga",
-        "password5" : "Jotojot",
-        "password6" : "Paller",
-        "password7" : "Marribay",
-        "password8" : "Soreto",
-        "password9" : "Daulo",
-        "password10" : "Bergado"
+    
+    accounts = {
+        'user1': 'password1',
+        'user2': 'password2',
+        'user3': 'password3',
+        'user4': 'password4',
+        'user5': 'password5',
+        'user6': 'password6',
+        'user7': 'password7',
+        'user8': 'password8',
+        'user9': 'password9',
+        'user10': 'password10'
     }
 
-    if usernameInput in usernames.values():
-        if usernameInput == "Mae" and passwordInput == "Ymata":
-            print("You are now logged in to the System.")
-                
-        elif usernameInput == "Loraine" and passwordInput == "Dela Torre":
-            print("You are now logged in to the System.")
-        
-        elif usernameInput == "Crystal" and passwordInput == "Rubio":
-            print("You are now logged in to the System.")
-
-        elif usernameInput == "Lyn" and passwordInput == "Danga":
-            print("You are now logged in to the System.")
-
-        elif usernameInput == "Clarisse" and passwordInput == "Jotojot":
-            print("You are now logged in to the System.")
-
-        elif usernameInput == "Irish" and passwordInput == "Paller":
-            print("You are now logged in to the System.")
-
-        elif usernameInput == "Lei" and passwordInput == "Marribay":
-            print("You are now logged in to the System.")
-
-        elif usernameInput == "Ann" and passwordInput == "Soreto":
-            print("You are now logged in to the System.")
-
-        elif usernameInput == "Carl" and passwordInput == "Daulo":
-            print("You are now logged in to the System.")
-
-        elif usernameInput == "Aldrey" and passwordInput == "Bergado":
-            print("You are now logged in to the System.")
-            
+    if usernameInput in accounts:
+        if passwordInput == accounts[usernameInput]:
+            print("You are now logged in to the system.")
         else:
-                print("Incorrect Password.")
-    else:
-        print("Username is not a valid user of the Sytem.")
-        getUserInput
+            print("Invalid password.")
+    else: 
+        print("Username is not a valid user of the system.")
+    
 
-getUserInput()
+SystemLogin()
