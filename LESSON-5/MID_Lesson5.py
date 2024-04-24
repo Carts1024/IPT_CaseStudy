@@ -322,7 +322,7 @@ def Item_5():
                 if systemUsers[username] == password:  # When inputs match
                     print("\nYou have logged in successfully.")
                     print(f"Hello, {username}!")
-                    choice = input('Do you want to try again? (Press Y to continue): ').upper()
+                    choice = input('\nDo you want to log in with another account? (Press Y to continue): ').upper()
                     break
                 else:  # When the user input a wrong password
                     print("\nInvalid password.")
