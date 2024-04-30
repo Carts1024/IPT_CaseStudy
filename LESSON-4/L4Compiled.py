@@ -146,8 +146,11 @@ def Fifth_Number():
                     element_count += 1
 
             print("Letter e: ", element_count)
-            mylist.pop(0)
-            mylist.pop(-1)
+            if element_count == 1:
+                mylist.pop(0)
+            else:
+                mylist.pop(0)
+                mylist.pop(-1)
             print("Letter f: Remove first and last item = ", mylist)
             mylist.sort()
             print("Letter f: Sorted list = ", mylist)
