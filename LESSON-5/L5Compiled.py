@@ -247,10 +247,21 @@ def Item_4():
     products = {}
 
     def inputf():
-        input_product = str(input('Enter a product: '))
-        input_product = input_product[0].upper() + input_product[1:]
-        input_price = float(input('Enter a price: '))
-        products[input_product] = input_price
+        while True:
+            input_product = str(input('Enter a product: '))
+            if input_product != "":  # Checks if input is empty
+                input_product = input_product[0].upper() + input_product[1:]
+                break
+            else:
+                print("Enter Valid input")
+        while True:
+            try:
+                input_price = float(input('Enter a price: '))
+                products[input_product] = input_price
+                break
+            except ValueError:
+                print(f"ERROR: Did not find a valid number")
+                
 
     def repeat():
         choice = (str(input('Do you want to enter again? (Press Y to continue): '))).upper()
