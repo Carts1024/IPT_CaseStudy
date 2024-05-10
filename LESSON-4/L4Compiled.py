@@ -1,21 +1,9 @@
 import os
 
-def start():  # Main (Function 1)
-
-    print('--------------------------------------------------------------')
-    print('               WELCOME TO DICTIONARY METHODS BY GROUP 6')
-    print('                              MEMBERS:\n')
-    print('                        BERGADO,CARL ALDREY')
-    print('                        DANGA, CRYSTALYN')
-    print('                        DELA TORRE, MAE LORAINE')
-    print('                        PALLER, CLARISSE IRISH')
-    print('                        SORETO, LEI ANN\n')
-    input(
-        '                       PRESS ENTER TO CONTINUE\n--------------------------------------------------------------')
-    os.system('cls')
-
 
 def First_Number():
+    os.system('cls')
+
     x = [1, 2, 3, 4, 5]
     y = [11, 12, 13, 14, 15]
     z = [21, 22, 23, 24, 25]
@@ -52,11 +40,12 @@ def First_Number():
     print("k.", x[::2])
     x[3] = 8
     print("l. x[3] = 8 = ", x)
-    input('')
+
     return
 
 
 def Second_Number():
+    os.system('cls')
     # Create an empty list
     list = []
 
@@ -70,10 +59,10 @@ def Second_Number():
     list += [8, 67, 'apple', 6.5]
 
     print(list)
-    input('')
-    return
+
 
 def Third_Number():
+    os.system('cls')
     mylist = []
 
     mylist.append(67)
@@ -108,60 +97,46 @@ def Third_Number():
     index = mylist.index(False)
     mylist.pop(index)
     print("Letter g: ", mylist)
-    input('')
-    return
+
 
 def Fifth_Number():
+    os.system('cls')
     mylist = []
 
-    while True:
-        try:
-            num_list = int(input("How many elements do you want in the list?: "))
-            break
-        except ValueError:
-            print("Invalid input. Please enter a number.")
-            continue
-    while True:
-        try:
-            sum = 0
-            for _ in range(num_list):
-                element = int(input("Enter an element: "))
-                sum = sum + element
-                mylist.append(element)
-            print("Letter a: Sum of items = ", sum)
+    num_list = int(input("How many elements do you want in the list?: "))
 
-            print("Letter b: Last item on the list ", mylist[-1])
+    sum = 0
+    for _ in range(num_list):
+        element = int(input("Enter an element: "))
+        sum = sum + element
+        mylist.append(element)
+    print("Letter a: Sum of items = ", sum)
 
-            mylist.reverse()
-            print("Letter c: Items in reversed order = ", mylist)
+    print("Letter b: Last item on the list ", mylist[-1])
 
-            if 5 in mylist:
-                print("Letter d: 'Yes'")
-            else:
-                print("Letter d: 'No'")
+    mylist.reverse()
+    print("Letter c: Items in reversed order = ", mylist)
 
-            element_count = 0
-            for _ in mylist:
-                if _ < 5:
-                    element_count += 1
+    if 5 in mylist:
+        print("Letter d: 'Yes'")
+    else:
+        print("Letter d: 'No'")
 
-            print("Letter e: ", element_count)
-            if element_count == 1:
-                mylist.pop(0)
-            else:
-                mylist.pop(0)
-                mylist.pop(-1)
-            print("Letter f: Remove first and last item = ", mylist)
-            mylist.sort()
-            print("Letter f: Sorted list = ", mylist)
-            input('')
-            return
-        except ValueError:
-            print("Invalid input.")
-            input('')
-            continue
+    element_count = 0
+    for _ in mylist:
+        if _ < 5:
+            element_count += 1
+
+    print("Letter e: ", element_count)
+    mylist.pop(0)
+    mylist.pop(-1)
+    print("Letter f: Remove first and last item = ", mylist)
+    mylist.sort()
+    print("Letter f: Sorted list = ", mylist)
+
 
 def Sixth_Number():
+    os.system('cls')
     f = [8, 9, 10]
 
     f[1] = 17
@@ -179,112 +154,111 @@ def Sixth_Number():
     f = f*2
     f.insert(3, 25)
     print("Letter e: ", f)
-    input('')
-    return
+
 
 def Seventh_Number():
-    while True:
-        try:
-            integer = int(input("\nEnter an integer: "))
-            factors = []
+    os.system('cls')
+    try:
+        integer = int(input("\nEnter an integer: "))
+        factors = []
 
-            # Evaluate the input
-            if integer == 0:  # When integer is 0
-                print("Zero has no common factors with any other number except for zero.")
-                print("Any number divided by zero is undefined.")
-            elif integer < 0:  # When integer is a negative number
-                print("Invalid input. Please enter a positive integer.")
-            else:
-                # Find factors of the integer
-                for i in range(1, integer + 1):
-                    if integer % i == 0:
-                        factors.append(i)  # Store to the list
-                # Print the list of factors
-                print(f"Factors of {integer}:", factors)
-                input('')
-                return
-        except ValueError:
-            print("Invalid input. Please enter an integer.")
-            input('')
-            continue
+        # Evaluate the input
+        if integer == 0:  # When integer is 0
+            print("Zero has no common factors with any other number except for zero.")
+            print("Any number divided by zero is undefined.")
+        elif integer < 0:  # When integer is a negative number
+            print("Invalid input. Please enter a positive integer.")
+        else:
+            # Find factors of the integer
+            for i in range(1, integer + 1):
+                if integer % i == 0:
+                    factors.append(i)  # Store to the list
+            # Print the list of factors
+            print(f"Factors of {integer}:", factors)
+    except ValueError:
+        print("Invalid input. Please enter an integer.")
+
 
 def Eight_Number():
-    while True:
-        try:
-            size = int(input("\nEnter the size of the list: "))
-            break
-        except ValueError:
-            print("Invalid input. Please enter an integer.")
-            continue
+    os.system('cls')
+    try:
+        size = int(input("\nEnter the size of the list: "))
 
-    while True:
-        try:
-            # Ask user to input integers
-            initialList = []
-            print(f"Enter {size} integers:")
-            for _ in range(size):
-                num = int(input("Enter values: "))
-                initialList.append(num)
+        # Ask user to input integers
+        initialList = []
+        print(f"Enter {size} integers:")
+        for size in range(size):
+            num = int(input("Enter values: "))
+            initialList.append(num)
 
-            # Convert to set to remove duplicates easily
-            finalList = (set(initialList))
+        # Convert to set to remove duplicates easily
+        finalList = (set(initialList))
 
-            # Print the resulting list
-            print("Original List:", initialList)
-            print("List without duplicates:", finalList)
-            input('')
-            return
-        except ValueError:
-            print("Invalid input. Please input an integer.")
-            continue
+        # Print the resulting list
+        print("Original List:", initialList)
+        print("List without duplicates:", finalList)
+
+    except ValueError:
+        print("Invalid input. Please input an integer.")
+
 
 def RunProgram():
     while True:
+        os.system('cls')
+        print("CHOOSE A NUMBER TO BE VIEWED")
+        print("[1] Problem 1")
+        print("[2] Problem 2")
+        print("[3] Problem 3 and 4")
+        print("[5] Problem 5")
+        print("[6] Problem 6")
+        print("[7] Problem 7")
+        print("[8] Problem 8")
+
         try:
-            os.system('cls')
-            print("===============================================================================================")
-            print("\t\t\t\tWELCOME TO LESSON 4: LIST")
-            print("===============================================================================================")
-            print("CHOOSE A NUMBER TO BE VIEWED")
-            print("[1] Problem 1")
-            print("[2] Problem 2")
-            print("[3] Problem 3 and 4")
-            print("[5] Problem 5")
-            print("[6] Problem 6")
-            print("[7] Problem 7")
-            print("[8] Problem 8")
-            print("[9] Exit")
-
             userChoice = int(input("Enter your choice: "))
-
-            if 1 <= userChoice <= 9:
-                if userChoice == 1:
-                    First_Number()
-                elif userChoice == 2:
-                    Second_Number()
-                elif userChoice == 3:
-                    Third_Number()
-                elif userChoice == 4:
-                    print(f"{userChoice} is not available in the menu. Please enter another number.")
-                    input('')
-                    continue
-                elif userChoice == 5:
-                    Fifth_Number()
-                elif userChoice == 6:
-                    Sixth_Number()
-                elif userChoice == 7:
-                    Seventh_Number()
-                elif userChoice == 8:
-                    Eight_Number()
-                elif userChoice == 9:
-                    print("End of program. Thank you!")
-                    break
+            if userChoice == 1:
+                print("\nExecuting Problem 1...\n")
+                First_Number()
+            elif userChoice == 2:
+                print("\nExecuting Problem 2...\n")
+                Second_Number()
+            elif userChoice == 3:
+                print("\nExecuting Problem 3 and 4...\n")
+                Third_Number()
+            elif userChoice == 5:
+                print("\nExecuting Problem 5...\n")
+                Fifth_Number()
+            elif userChoice == 6:
+                print("\nExecuting Problem 6...\n")
+                Sixth_Number()
+            elif userChoice == 7:
+                print("\nExecuting Problem 7...\n")
+                Seventh_Number()
+            elif userChoice == 8:
+                print("\nExecuting Problem 8...\n")
+                Eight_Number()
             else:
-                print("\nInvalid input! Choose what is only available!")
-                input('')
+                print("\nInvalid choice! Please choose a number from the menu.")
         except ValueError:
-            print("Invalid input. Please choose between 1-9.")
-            input('')
+            print("\nInvalid input! Please enter a number.")
+
+        input("\nPress Enter to continue...")
+
+
+def start():  # Main (Function 1)
+
+    print('--------------------------------------------------------------')
+    print('               WELCOME TO LIST METHODS BY GROUP 6')
+    print('                              MEMBERS:\n')
+    print('                        BERGADO,CARL ALDREY')
+    print('                        DANGA, CRYSTALYN')
+    print('                        DELA TORRE, MAE LORAINE')
+    print('                        PALLER, CLARISSE IRISH')
+    print('                        SORETO, LEI ANN\n')
+    input(
+        '                       PRESS ENTER TO CONTINUE\n--------------------------------------------------------------')
+    os.system('cls')
+
 
 start()
 RunProgram()
